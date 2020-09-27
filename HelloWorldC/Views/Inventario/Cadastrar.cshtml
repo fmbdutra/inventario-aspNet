@@ -1,0 +1,58 @@
+﻿@model HelloWorldC.Models.Peca
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <h1>CADASTRO DE PEÇAS</h1>
+    <form action="/inventario/cadastrar" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="nome">Nome:</label>
+                </td>
+                <td>
+                    <input type="text" name="nome"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="fabricante">Fabricante:</label>
+                </td>
+                <td>
+                    <input type="text" name="fabricante"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="quantidade">Quantidade:</label>
+                </td>
+                <td>
+                    <input type="number" pattern="[0-999]" min="1" value="1" name="quantidade"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="preco">Preço:</label>
+                </td>
+                <td>
+                    <input type="text" min="0" name="preco" value="0,00"><br>
+                </td>
+            </tr>
+
+        </table>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>

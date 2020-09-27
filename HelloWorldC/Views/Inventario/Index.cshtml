@@ -1,0 +1,36 @@
+﻿@model IEnumerable<HelloWorldC.Models.Peca>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>INVENTARIO DE PEÇAS</h1>
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Fabricante</td>
+            <td>Preço</td>
+            <td>Data Cadastro</td>
+        </tr>
+        @foreach (var peca in Model)
+        {
+            <tr>
+                <td>@peca.id</td>
+                <td>@peca.nome</td>
+                <td>@peca.fabricante</td>
+                <td>@peca.preco</td>
+                <td>@peca.date</td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

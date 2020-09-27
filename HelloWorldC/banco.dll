@@ -1,0 +1,16 @@
+create database DBInventario
+go
+use Invetario
+go
+
+create table Pecas
+(
+  Id		  int           primary key   identity,
+  Nome        varchar(100)  not null,
+  Fabricante  varchar(80)   not null,
+  Preco		  money,
+  Date		  date          not null
+)
+
+insert into Pecas values ('Retrovisor', 'Chery', 100.0, 2020-02-02)
+insert into Pecas values ('Lanterna traseira', 'Fiat', 3.50, 2020-02-02)
